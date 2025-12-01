@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import profile from "../assets/profile.jpeg";
 
 const Hero = () => {
   const particlesInit = async (main) => {
@@ -119,7 +120,7 @@ const Hero = () => {
         className="mt-10 md:mt-0 md:ml-12"
       >
         <img
-          src="/src/assets/profile.jpeg"
+          src={profile}
           alt="Nitin Chugh"
           className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-indigo-500/50 hover:scale-105 transition-transform duration-500"
         />
