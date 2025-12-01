@@ -13,12 +13,13 @@ const projects = [
     live: "https://urbancartx-frontendu.onrender.com/",
   },
   {
-    title: "Quiz Application",
+    title: "Local Crime Repoting (Hackathon Project)",
     description:
-      "A dynamic quiz application that allows users to take quizzes on various topics, track scores, and view results with a sleek UI.",
-    tech: "HTML, CSS, JavaScript, spring boot",
-    github: "https://github.com/NitinChugh13/Quiz_App",
-    image: "https://repository-images.githubusercontent.com/182525249/aadd7a80-54fe-11eb-9872-ccd06b8789b6",
+      "A web application that allows users to report local crimes, view crime statistics, and receive safety alerts in their area.",
+    tech: "HTML, CSS, JavaScript, python , leaflet.js, Flask",
+    github: "https://github.com/NitinChugh13/LCR-Community-Safety",
+    image: "https://t3.ftcdn.net/jpg/17/95/18/84/240_F_1795188450_9sEJSGjA6IvoQFTiJ8X1wkBRtOn4JUBj.jpg",
+    live : "https://lcr-community-safety.onrender.com",
   },
   {
     title: "My Portfolio",
