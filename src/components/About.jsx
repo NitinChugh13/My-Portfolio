@@ -42,7 +42,7 @@ const About = () => {
             I specialize in designing and developing responsive, modern, and
             accessible web applications using technologies like{" "}
             <span className="text-indigo-400 font-medium">
-              React.js, Tailwind CSS, and JavaScript
+              React.js, Tailwind CSS , JavaScript and Backend Development
             </span>
             . I have a strong foundation in{" "}
             <span className="text-indigo-400 font-medium">C++</span> and an eye

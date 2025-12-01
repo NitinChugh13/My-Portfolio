@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiCplusplus, SiVite } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiSpring, SiFirebase } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 
 
 
@@ -43,11 +46,16 @@ const skills = [
     ],
   },
   {
-    title: "Learning & Exploring",
-    items: [
-      { name: "Node.js", icon: <FaJs className="text-green-400" /> },
-      { name: "Backend Development", icon: <FaJs className="text-lime-400" /> },
-    ],
+    title: "Backend Development",
+items: [
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { name: "MySQL", icon: <GrMysql className="text-blue-400" /> },
+  { name: "Spring", icon: <SiSpring className="text-green-500" /> },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
+],
+
   },
 ];
 

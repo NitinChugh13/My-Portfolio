@@ -77,7 +77,7 @@ const Hero = () => {
           </span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium text-gray-300 mb-6">
-          Front-End Developer | C++ Programmer | UI Designer
+          Full-Stack Developer | Problem Solver | Tech Enthusiast
         </h2>
         <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto md:mx-0">
           I build responsive, user-focused web applications with clean UI and

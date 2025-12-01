@@ -4,36 +4,38 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Local Crime Reporting System (NCR)",
+    title: "UrbanCartX-Ai Integrated E-commerce Platform",
     description:
-      "A web-based platform designed to display regional crime data dynamically on an interactive map, helping users understand safety levels by area.",
-    tech: "HTML, CSS, JavaScript, SQL",
-    github: "https://github.com/NitinChugh13",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800",
+      "A full-stack e-commerce web application with AI-driven product recommendations, user authentication, and a responsive design.",
+    tech: "React.js, Node.js, Express, MongoDB, Tailwind CSS, Firebase,Cloudinary,fuse.js",
+    github: "https://github.com/NitinChugh13/UrbanCartX-",
+    image: "https://img.freepik.com/free-photo/black-friday-sales-sign-neon-light_23-2151833076.jpg?semt=ais_hybrid&w=740&q=80",
+    live: "https://urbancartx-frontendu.onrender.com/",
   },
   {
-    title: "Weather Forecasting Web Application",
+    title: "Quiz Application",
     description:
-      "A multi-page weather dashboard providing real-time forecasts with dynamic backgrounds and smooth UI transitions.",
-    tech: "HTML, CSS, JavaScript, Weather API",
-    github: "https://github.com/NitinChugh13",
-    image: "https://images.unsplash.com/photo-1502303756787-1c0920efae4b?w=800",
+      "A dynamic quiz application that allows users to take quizzes on various topics, track scores, and view results with a sleek UI.",
+    tech: "HTML, CSS, JavaScript, spring boot",
+    github: "https://github.com/NitinChugh13/Quiz_App",
+    image: "https://repository-images.githubusercontent.com/182525249/aadd7a80-54fe-11eb-9872-ccd06b8789b6",
   },
   {
-    title: "EasyGov (Hackathon Project)",
+    title: "My Portfolio",
     description:
-      "A React-based web app that simplifies government document applications with multilingual support and a step-by-step guide.",
+      "A personal portfolio website to showcase my projects, skills, and experience with a modern design and smooth animations.",
     tech: "React.js, Tailwind CSS, Framer Motion",
-    github: "https://github.com/NitinChugh13",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+    github: "https://github.com/NitinChugh13/My-Portfolio",
+    image: "https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    live : "https://my-portfolio-n986.onrender.com",
   },
   {
     title: "Eduford",
     description:
       "An educational mini-project website for exploring online technical courses, designed for an elegant and responsive experience.",
     tech: "HTML, CSS, JavaScript",
-    github: "https://github.com/NitinChugh13",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800",
+    github: "https://github.com/NitinChugh13/EduFord-A-One-Stop-Solution-For-Technical-Courses",
+    image: "https://www.21kschool.com/in/wp-content/uploads/sites/4/2023/09/Pros-and-Cons-of-Using-Education-Technology.png",
   },
 ];
 
@@ -87,7 +89,8 @@ const Projects = () => {
                     <FaGithub /> GitHub
                   </a>
                   <a
-                    href="#"
+                    href={project.live || "#"}
+                    target="_blank"
                     className="flex items-center gap-2 px-4 py-2 border-2 border-indigo-400 text-indigo-400 rounded-full font-semibold hover:bg-indigo-500 hover:text-white transition-colors"
                   >
                     <FaExternalLinkAlt /> Live
