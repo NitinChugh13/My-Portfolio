@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpeg";
+import resume from "../assets/resume.pdf";
 const About = () => {
   return (
     <section id="about" className="relative py-12 md:py-24 px-4 md:px-12 lg:px-20 bg-gray-950 text-white">
@@ -38,7 +39,7 @@ const About = () => {
 
           <div className="mt-6 md:mt-8">
             <a
-              href="src/assets/resume.pdf"
+              href={resume}
               download
               className="px-5 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-semibold shadow-md hover:scale-105 transition-transform inline-block"
             >
