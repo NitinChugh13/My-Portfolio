@@ -14,7 +14,7 @@ const education = [
       "4th Semester – 8.70 CGPA",
       "Overall Average: 8.96 CGPA",
     ],
-    icon:<FaGraduationCap className="text-indigo-400 text-3xl" />,
+    icon: <FaGraduationCap className="text-indigo-400 text-3xl" />,
   },
   {
     title: "Senior Secondary (Class 12th)",
@@ -34,10 +34,7 @@ const education = [
 
 const Education = () => {
   return (
-    <section
-      id="education"
-      className="py-24 px-6 md:px-12 bg-gray-900 text-white"
-    >
+    <section id="education" className="py-12 md:py-20 px-4 md:px-12 bg-gray-900 text-white">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,33 +42,26 @@ const Education = () => {
         viewport={{ once: true }}
         className="max-w-5xl mx-auto text-center"
       >
-        <h2 className="text-4xl font-bold mb-12 text-indigo-400">
-          Education
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-indigo-400">Education</h2>
 
-        <div className="relative border-l-2 border-indigo-500/50 pl-10 text-left space-y-12">
-
+        <div className="relative border-l-2 border-indigo-500/50 pl-6 md:pl-10 text-left space-y-8">
           {education.map((edu, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -left-9 top-1 flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full shadow-lg border border-indigo-500/30">
-                         {edu.icon}
-                </div>
+              <div className="absolute -left-7 md:-left-9 top-1 flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full shadow-lg border border-indigo-500/30">
+                {edu.icon}
+              </div>
 
-              <h3 className="text-2xl font-semibold text-indigo-300 mb-2">
-                {edu.title}
-              </h3>
-              <p className="text-gray-400 font-medium mb-1">
-                {edu.institution}
-              </p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-indigo-300 mb-2">{edu.title}</h3>
+              <p className="text-gray-400 font-medium mb-1">{edu.institution}</p>
               <p className="text-sm text-gray-500 mb-3">{edu.duration}</p>
-              <ul className="list-disc list-inside text-gray-300">
+              <ul className="list-disc list-inside text-gray-300 text-sm">
                 {edu.details.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -80,12 +70,11 @@ const Education = () => {
           ))}
         </div>
 
-        {/* View Resume Button */}
-        <div className="mt-12">
+        <div className="mt-8">
           <a
             href="/Nitin_Chugh_Resume.pdf"
             download
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full font-semibold hover:scale-105 transition-transform"
+            className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full font-semibold hover:scale-105 transition-transform"
           >
             <FaFileDownload />
             View Resume

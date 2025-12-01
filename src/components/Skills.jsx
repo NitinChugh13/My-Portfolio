@@ -15,8 +15,6 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiSpring, SiFirebase } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
-
-
 const skills = [
   {
     title: "Frontend Development",
@@ -41,27 +39,26 @@ const skills = [
     items: [
       { name: "Git", icon: <FaGitAlt className="text-orange-400" /> },
       { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
-     { name: "VS Code", icon: <FaCode className="text-blue-400" /> },
+      { name: "VS Code", icon: <FaCode className="text-blue-400" /> },
       { name: "Vite", icon: <SiVite className="text-yellow-400" /> },
     ],
   },
   {
     title: "Backend Development",
-items: [
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-  { name: "MySQL", icon: <GrMysql className="text-blue-400" /> },
-  { name: "Spring", icon: <SiSpring className="text-green-500" /> },
-  { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-],
-
+    items: [
+      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+      { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+      { name: "MySQL", icon: <GrMysql className="text-blue-400" /> },
+      { name: "Spring", icon: <SiSpring className="text-green-500" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
+    ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 bg-gray-900 text-white">
+    <section id="skills" className="py-12 md:py-24 px-4 md:px-12 bg-gray-900 text-white">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -69,11 +66,9 @@ const Skills = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl font-bold mb-12 text-indigo-400">
-          Skills & Technologies
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-indigo-400">Skills & Technologies</h2>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((category, i) => (
             <motion.div
               key={i}
@@ -81,9 +76,7 @@ const Skills = () => {
               transition={{ type: "spring", stiffness: 200 }}
               className="p-6 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-indigo-300">
-                {category.title}
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-300">{category.title}</h3>
               <ul className="space-y-3">
                 {category.items.map((skill, j) => (
                   <li

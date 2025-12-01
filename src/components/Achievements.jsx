@@ -31,10 +31,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <section
-      id="achievements"
-      className="py-24 px-6 md:px-12 bg-gray-950 text-white"
-    >
+    <section id="achievements" className="py-12 md:py-20 px-4 md:px-12 bg-gray-950 text-white">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -42,11 +39,9 @@ const Achievements = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl font-bold mb-12 text-indigo-400">
-          Achievements & Activities
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-indigo-400">Achievements & Activities</h2>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {achievements.map((item, i) => (
             <motion.div
               key={i}
@@ -55,12 +50,8 @@ const Achievements = () => {
               className="p-6 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 hover:border-indigo-500 transition-all duration-300 text-left"
             >
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-2xl font-semibold text-indigo-300 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {item.description}
-              </p>
+              <h3 className="text-2xl font-semibold text-indigo-300 mb-2">{item.title}</h3>
+              <p className="text-gray-400 leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>
