@@ -1,1 +1,10 @@
 @import "tailwindcss";
+.cursor-blink {
+  animation: blink 0.9s steps(2, start) infinite;
+  display: inline-block;
+  line-height: 1;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
