@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshots/banner.png" width="100%" />
+  <img src="screenshots/banner.jpg" width="100%" />
 </p>
 
 <p align="center"> <img src="https://img.shields.io/badge/Frontend-Developer-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/React-JS-blue?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Deployed-Live-green?style=for-the-badge" /> </p>
