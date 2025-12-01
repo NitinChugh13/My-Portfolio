@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import profile from "../assets/profile.jpeg";
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
         {/* Left Image */}
         <div className="w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
           <img
-            src="src/assets/profile.jpeg"
+            src={profile}
             alt="Nitin Chugh"
             className="rounded-2xl object-cover w-full h-full border-4 border-indigo-500/40 shadow-lg hover:scale-105 transition-transform duration-500"
           />
