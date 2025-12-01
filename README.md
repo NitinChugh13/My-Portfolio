@@ -1,16 +1,60 @@
-# React + Vite
+🌟 Portfolio – Nitin Chugh
+<br>
+A modern, responsive, and interactive personal portfolio showcasing my skills, projects, and experience as a Frontend Developer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center"> <img src="https://img.shields.io/badge/Frontend-Developer-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/React-JS-blue?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Deployed-Live-green?style=for-the-badge" /> </p>
+<br>
+🚀 Live Demo
 
-Currently, two official plugins are available:
+👉 Portfolio is live here:
+🔗 [https://your-portfolio-link.com](https://my-portfolio-n986.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 About This Portfolio
 
-## React Compiler
+This is my personal portfolio website built to highlight:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My skills in frontend development
 
-## Expanding the ESLint configuration
+My featured projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Experience & education
+
+Clean UI, smooth animations, and responsive layout
+
+A proper contact form / social links to reach me
+
+The goal was to build a fast, visually appealing, and professional-looking space representing me and my work.
+
+🛠️ Tech Stack
+Category	Technologies
+Frontend	React.js, Tailwind CSS, Framer Motion
+Tools	Git, VS Code
+Deployment	Vercel / Netlify / Render
+
+✨ Features
+
+Fully responsive and mobile-friendly
+
+Smooth scroll + animations
+
+Projects showcase with images & links
+
+Clean and modern UI
+
+Reusable components
+
+Contact section with social media links
+
+Light/dark theme (if applicable)
+
+🌐 Connect With Me
+<p align="left"> <a href="https://github.com/NitinChugh13"><img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" height="28"/></a> <a href="https://linkedin.com/in/your-link"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" height="28"/></a> <a href="mailto:your-email@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" height="28"/></a> </p>
+
+🧩 Contributions
+
+This is a personal project — contributions are welcome if you want to improve any part of the UI or code quality.
+
+⭐ Show Support
+
+If you like this project, please ⭐ the repository — it helps a lot!
+
