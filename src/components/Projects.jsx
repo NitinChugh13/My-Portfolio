@@ -36,6 +36,7 @@ const projects = [
     tech: "HTML, CSS, JavaScript",
     github: "https://github.com/NitinChugh13/EduFord-A-One-Stop-Solution-For-Technical-Courses",
     image: "https://www.21kschool.com/in/wp-content/uploads/sites/4/2023/09/Pros-and-Cons-of-Using-Education-Technology.png",
+    link : "https://eduford-a-one-stop-solution-for-nuqo.onrender.com",
   },
 ];
 
