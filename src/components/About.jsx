@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpeg";
-
 const About = () => {
   return (
     <section
