@@ -4,6 +4,7 @@ import { FaArrowRight, FaDownload } from "react-icons/fa";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import profile from "../assets/profile.jpeg";
+import resume from "../assets/resume.pdf";
 
 const Hero = () => {
   const particlesInit = async (main) => {
@@ -68,7 +69,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/src/assets/resume.pdf"
+            href={resume}
             download
             className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border-2 border-indigo-400 rounded-full font-semibold text-indigo-400 hover:bg-indigo-500 hover:text-white transition-colors"
           >
