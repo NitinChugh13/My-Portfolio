@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaSchool, FaFileDownload } from "react-icons/fa";
+import resume from "../assets/resume.pdf";
 
 const education = [
   {
@@ -72,7 +73,7 @@ const Education = () => {
 
         <div className="mt-8">
           <a
-            href="/Nitin_Chugh_Resume.pdf"
+            href={resume}
             download
             className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full font-semibold hover:scale-105 transition-transform"
           >
