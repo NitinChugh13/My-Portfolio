@@ -175,7 +175,7 @@ const About = () => {
               <div>
                 <p className="text-xs text-gray-400 uppercase">Based in</p>
                 <p className="text-sm md:text-base text-white font-medium">
-                  Ghaziabad, India
+                  Delhi , India
                 </p>
               </div>
             </div>
