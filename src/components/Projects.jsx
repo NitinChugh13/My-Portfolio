@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 /**
- * Projects.jsx (enhanced)
- * Replace your current Projects.jsx with this file.
- * Requires: framer-motion, react-icons, Tailwind CSS
+ * Projects.jsx — stronger visible blobs version
+ * Replace your existing Projects.jsx with this file.
  */
 
 const projects = [
@@ -52,25 +51,35 @@ const projects = [
   },
 ];
 
+/* --- Enhanced animation variants --- */
 const cardVariants = {
-  idle: { scale: 1, y: 0, rotateX: 0, rotateY: 0 },
-  hover: (tilt = 8) => ({
-    scale: 1.02,
-    y: -8,
-    rotateX: 0,
-    rotateY: 0,
-    transition: { type: "spring", stiffness: 200, damping: 18 },
-  }),
+  idle: { scale: 1, y: 0, rotateX: 0, rotateY: 0, boxShadow: "0 0 0 rgba(0,0,0,0)" },
+  hover: {
+    scale: 1.03,
+    y: -10,
+    rotateX: 4,
+    rotateY: -4,
+    boxShadow: "0 20px 40px rgba(0,0,0,0.35)",
+    transition: { type: "spring", stiffness: 180, damping: 14 },
+  },
 };
 
 const imgVariants = {
   idle: { scale: 1 },
-  hover: { scale: 1.08, transition: { duration: 0.6, ease: "easeOut" } },
+  hover: {
+    scale: 1.12,
+    rotate: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const overlayVariants = {
-  idle: { opacity: 0, y: 8 },
-  hover: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  idle: { opacity: 0, y: 12 },
+  hover: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
 };
 
 const badgeContainer = {
@@ -85,8 +94,96 @@ const badgeVariants = {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-12 md:py-20 px-6 md:px-12 bg-gray-950 text-white">
-      <div className="max-w-6xl mx-auto">
+   <section
+  id="projects"
+  className="
+    relative py-12 md:py-20 px-6 md:px-12 text-white overflow-hidden
+    bg-gradient-to-br from-[#0b0b11]/85 via-[#0f0f19]/60 to-[#161621]/35
+    backdrop-blur-[1px]
+  "
+>
+      
+
+      {/* ===========================
+          Visible Floating Gradient Blobs (stronger)
+          - I removed the hidden rule so you see them while testing.
+          - After confirming, you can add `hidden md:block` back for mobile.
+         =========================== */}
+      <div
+        className="absolute inset-0 -z-20 pointer-events-none"
+        aria-hidden="true"
+      >
+        {/* LARGE left blob */}
+        <motion.div
+          animate={{ x: [-30, 20, -10], y: [0, -18, 10] }}
+          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            left: "6%",
+            top: "8%",
+            width: "44rem",
+            height: "44rem",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle at 30% 30%, rgba(124,58,237,0.22), rgba(99,102,241,0.08) 40%, rgba(59,130,246,0.02) 80%)",
+            filter: "blur(80px)",
+            opacity: 0.95,
+            zIndex: -20,
+          }}
+        />
+
+        {/* MID-right warm blob */}
+        <motion.div
+          animate={{ x: [10, -28, 10], y: [-8, 18, -6] }}
+          transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            left: "48%",
+            top: "50%",
+            width: "36rem",
+            height: "36rem",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle at 30% 30%, rgba(251,146,60,0.18), rgba(244,63,94,0.04))",
+            filter: "blur(80px)",
+            opacity: 0.95,
+            zIndex: -20,
+          }}
+        />
+
+        {/* small accent blob */}
+        <motion.div
+          animate={{ x: [0, 14, -8], y: [0, -12, 8] }}
+          transition={{ repeat: Infinity, duration: 11, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            left: "26%",
+            top: "62%",
+            width: "20rem",
+            height: "20rem",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle at 40% 40%, rgba(6,182,212,0.20), rgba(59,130,246,0.03))",
+            filter: "blur(48px)",
+            opacity: 0.95,
+            zIndex: -20,
+          }}
+        />
+
+        {/* subtle grid texture for depth */}
+        <div style={{ position: "absolute", inset: 0, opacity: 0.035, zIndex: -19 }}>
+          <svg className="w-full h-full" viewBox="0 0 600 600">
+            <defs>
+              <pattern id="projects-grid-strong" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#projects-grid-strong)" />
+          </svg>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,8 +299,6 @@ const Projects = () => {
                       type="button"
                       onClick={() => {
                         // placeholder for details / modal
-                        // if you want a modal, we can open one here and pass project info
-                        // currently will scroll to projects as subtle feedback
                         document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="mt-0 sm:mt-0 ml-0 sm:ml-auto inline-flex items-center gap-2 px-4 py-2 bg-gray-800/60 text-gray-200 rounded-full text-sm hover:bg-gray-800 transition"

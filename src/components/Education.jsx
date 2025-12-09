@@ -37,8 +37,94 @@ const Education = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section id="education" className="py-16 px-4 md:px-12 bg-gray-950 text-white relative">
-      
+    <section
+      id="education"
+      className="
+        relative py-16 px-4 md:px-12 text-white overflow-hidden
+        bg-gradient-to-br from-[#0b0b11]/90 via-[#10101a]/70 to-[#12121c]/40
+        backdrop-blur-[1px]
+      "
+    >
+      {/* ========== Hero-like background decorations (only background) ========== */}
+      <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+        {/* large decorative conic/blur (hero-like) */}
+        <div
+          style={{
+            position: "absolute",
+            left: "-8%",
+            top: "-10%",
+            width: "56rem",
+            height: "56rem",
+            borderRadius: "50%",
+            background:
+              "linear-gradient(120deg, rgba(99,102,241,0.22), rgba(168,85,247,0.14) 45%, rgba(244,114,182,0.06))",
+            filter: "blur(110px)",
+            opacity: 0.95,
+            transform: "translateZ(0)",
+          }}
+        />
+
+        {/* animated diagonal blob (subtle motion) */}
+        <motion.div
+          animate={{ x: [0, 18, -12, 0], y: [0, -10, 6, 0], rotate: [0, 1, -1, 0] }}
+          transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            left: "6%",
+            top: "6%",
+            width: "34rem",
+            height: "34rem",
+            borderRadius: "40%",
+            background:
+              "linear-gradient(140deg, rgba(124,58,237,0.18), rgba(99,102,241,0.06), rgba(6,182,212,0.04))",
+            filter: "blur(70px)",
+            opacity: 0.96,
+          }}
+        />
+
+        {/* soft right-side glow */}
+        <div
+          style={{
+            position: "absolute",
+            right: "-6%",
+            bottom: "-6%",
+            width: "44rem",
+            height: "44rem",
+            borderRadius: "50%",
+            background:
+              "linear-gradient(90deg, rgba(6,182,212,0.10), rgba(99,102,241,0.04))",
+            filter: "blur(120px)",
+            opacity: 0.9,
+          }}
+        />
+
+        {/* subtle grid texture for depth */}
+        <div style={{ position: "absolute", inset: 0, opacity: 0.03 }}>
+          <svg className="w-full h-full" viewBox="0 0 600 600" preserveAspectRatio="none">
+            <defs>
+              <pattern id="edu-hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.45" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#edu-hero-grid)" />
+          </svg>
+        </div>
+
+        {/* shimmer overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            mixBlendMode: "overlay",
+            background:
+              "linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01), rgba(255,255,255,0.03))",
+            animation: "eduShimmer 10s linear infinite",
+            opacity: 0.06,
+          }}
+        />
+      </div>
+
+      {/* ========== Original content (unchanged) ========== */}
       {/* Section Header */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -51,7 +137,6 @@ const Education = () => {
       </motion.h2>
 
       <div className="max-w-5xl mx-auto relative">
-
         {/* Vertical timeline line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-600 hidden md:block"></div>
 
@@ -150,6 +235,17 @@ const Education = () => {
           </motion.div>
         </div>
       )}
+
+      {/* animations / reduced motion */}
+      <style jsx>{`
+        @keyframes eduShimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .framer-motion, motion { animation: none !important; }
+        }
+      `}</style>
     </section>
   );
 };
